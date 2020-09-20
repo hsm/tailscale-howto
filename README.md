@@ -2,7 +2,7 @@
 
 Docker is a nice way to maintain consistent work environments across different remote servers if you need to. Some of the stuff people do require GPU resources and my machines tend to move around a lot across different cloud providers, as well as not being always on or even exist. In short, my machines change IP a lot, various ports open and close, and I don't want to spend a lot of time thinking about security every time a port opens.
 
-One way to make this easier is to use [Tailscale](https://tailscale.com/). Tailscale uses [Wireguard](https://www.wireguard.com/) as VPN as well as [https://tailscale.com/blog/how-nat-traversal-works/](various tricks) to traverse firewalls in order to avoid using a relay server. It's free for personal use. In the below we'll use it to show how to set up a developer Docker image with a fixed IP that can be moved around.
+One way to make this easier is to use [Tailscale](https://tailscale.com/). Tailscale uses [Wireguard](https://www.wireguard.com/) as VPN as well as [various tricks](https://tailscale.com/blog/how-nat-traversal-works/) to traverse firewalls in order to avoid using a relay server. It's free for personal use. In the below we'll use it to show how to set up a developer Docker image with a fixed IP that can be moved around.
 
 We'll assume you have Docker installed on your machine as well as the Tailscale app. You also need a Tailscale account. At the time of writing, the Tailscale app version is 1.0.5.
 
